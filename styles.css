@@ -168,6 +168,80 @@ p { color: var(--muted); line-height: 1.68; }
   text-align: center;
 }
 
+
+.original-stamp {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(20px, 4vw, 42px);
+  margin-top: -24px;
+}
+
+.stamp-mark {
+  width: clamp(154px, 20vw, 218px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 6px;
+  border: 3px solid rgba(214, 184, 100, 0.72);
+  border-radius: 50%;
+  color: var(--gold-light);
+  background:
+    radial-gradient(circle, rgba(184, 149, 77, 0.16), transparent 62%),
+    rgba(14, 15, 13, 0.72);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.28), inset 0 0 0 1px rgba(255,255,255,0.08);
+  transform: rotate(-5deg);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.stamp-mark strong {
+  display: block;
+  font-size: clamp(1.45rem, 3vw, 2.25rem);
+  line-height: 0.95;
+  letter-spacing: 0.08em;
+  color: var(--text);
+}
+
+.stamp-mark span {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.stamp-copy h2 {
+  margin-bottom: 14px;
+  font-size: clamp(1.9rem, 3.8vw, 3.9rem);
+}
+
+.stamp-copy p:last-child {
+  margin-bottom: 0;
+  font-size: 1.08rem;
+}
+
+.stamp-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.stamp-points span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(214, 184, 100, 0.36);
+  background: rgba(214, 184, 100, 0.10);
+  color: var(--gold-light);
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
 .section-title { max-width: 840px; margin-bottom: clamp(28px, 5vw, 56px); }
 .feature-grid {
   display: grid;
@@ -288,6 +362,24 @@ p { color: var(--muted); line-height: 1.68; }
   .site-header { align-items: flex-start; }
   .nav { display: none; }
   h1 { font-size: clamp(3rem, 17vw, 5rem); }
+
+
+  .original-stamp {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-top: -10px;
+  }
+  .stamp-mark {
+    width: 150px;
+    justify-self: center;
+  }
+  .stamp-points {
+    justify-content: center;
+  }
+  .stamp-points span {
+    justify-content: center;
+    text-align: center;
+  }
 
   .feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
